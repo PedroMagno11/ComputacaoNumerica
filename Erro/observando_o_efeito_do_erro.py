@@ -1,7 +1,7 @@
-resultado = []
+resultados = []
 
-def operacao(k, rep=0, max_rep=60):
-    resultado.append(k)
+def operacao(k:float, rep=0, max_rep=60):
+    resultados.append(k)
     if rep >= max_rep:
         return
     if 0 <= k <= 0.5:
@@ -12,6 +12,6 @@ def operacao(k, rep=0, max_rep=60):
         return
     operacao(k, rep+1, max_rep)
 
+operacao(0.1)
 
-operacao(1/10)
-print(resultado)
+print(resultados)
